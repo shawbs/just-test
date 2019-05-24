@@ -20,7 +20,7 @@ const Storage = StoreEngine.createStore(storages, plugins)
 //     console.log(a, b)
 // })
 
-// Storage.set('test', {a: 111})
+Storage.set('token', 'asd')
 
 
 export default Storage

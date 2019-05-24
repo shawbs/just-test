@@ -1,0 +1,86 @@
+// base
+$font-family: 思源黑体, PingFang, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !default;
+//$html-font-size: 100px !default;
+$body-font-size: 10px !default;
+$line-height: 1.5 !default;
+
+// layout
+$pagesFontsize: 1.4rem !default;
+$popupFontsize: 1.4rem !default;
+$headerHeight: 5rem !default;
+$secondHeaderHeight: 4rem !default;
+$footerHeight: 5rem !default;
+$tabHeight: 5rem !default;
+$secondFooterHeight: 4rem !default;
+
+// btn
+$btn-radius: 8px !default;
+$btn-size: 1.4rem !default;
+$btn-padding: 20px 30px !default;
+
+// color
+$color-body: #fff !default;
+$color-primary: #F1493D !default;
+$color-success: #67c239 !default;
+$color-warning: #FF7542 !default;
+$color-danger: #f56c6c !default;
+
+$color-gray: #cccccc !default;
+$color-gray2: #fafafa !default;
+
+$color-red: #ff5000 !default;
+
+$color-green: #12CF10 !default;
+
+$color-blue: #169BD5 !default;
+$color-blue2: #F0F2FF !default;
+
+$color-yellow: #F66F33 !default;
+$color-yellow2: #FFBB44 !default;
+
+/*边框颜色*/
+$color-border: #E5E5E5 !default;
+
+/*字体颜色*/
+$color-text: #333333 !default;
+$color-text2: #4c4c4c !default;
+$color-text3: #999999 !default;
+
+$border: 1px solid $color-border;
+
+$shadow: 0 5px 10px $color-gray;
+
+$page-min-width: 1200px !default;
+
+// 间距
+$margin-small: 20px !default;
+$margin: 40px !default;
+$margin-big: 60px !default;
+
+$padding-small: 20px !default;
+$padding: 40px !default;
+$padding-big: 60px !default;
+
+// grid
+$grid-column: 24 !default;
+$grid-spacing: $margin !default;
+
+
+$z-index-0:    -1;
+$z-index-1:   100;//.page>.content
+
+$z-index-2:   200;//验证错误
+
+// navigation
+$z-index-3:   300;//.page>.footer
+$z-index-4:   400;//.page>.header
+
+//mask
+$z-index-5:   500;//.page>.components
+
+//popup
+$z-index-6:   600;//弹出菜单
+$z-index-7:   700;//弹出窗
+$z-index-8:   800;
+$z-index-9:   900;
+$z-index-10: 1000;

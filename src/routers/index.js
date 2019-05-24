@@ -1,95 +1,50 @@
 import vue from 'vue'
 import Router from 'vue-router'
-// import Store from '@store'
 
+import Layout from '@page/home';
+//route models
+import UserRoutes from './models/user';
+
+import Intercept from './intercept';
 
 vue.use(Router);
 
-const opt = {
-    mode: 'history'
-}
-
-
 const routes = [
-    // tab
-    {
-        path: '/tab',
-        name: 'tab',
-        meta: {
-            title: ''
-        },
-        component: () => import('@page/tab/index.vue'),
-        children: [
-            {
-                path: 'home',
-                name: 'tab/home',
-                meta: {
-                    title: 'home',
-                    no_transition: true
-                },
-                component: ()=> import('@page/tab/home.vue')
-            },
-            {
-                path: 'mine',
-                name: 'tab/mine',
-                meta: {
-                    title: 'mine',
-                    no_transition: true
-                },
-                component: ()=> import('@page/tab/mine.vue')
-            }
-        ]
-    },
     //主模块页面
     ...[
-
+      {
+        path: '/',
+        component: Layout,
+      }
     ],
-    //用户模块页面
-    ...[
-        {
-            path: '/user/login',
-            name: 'login',
-            meta: {
-                title: '登录',
-            },
-            component: () => import('@page/user/login.vue'),
+    ...UserRoutes,
+    {
+        path: '/error/:status',
+        name: 'error',
+        meta: {
+            title: 'error'
         },
-    ],
-    //其它页面
-    ...[
-        {
-            path: '/error/:status',
-            name: 'error',
-            meta: {
-                title: 'error'
-            },
-            component: () => import('@page/error/error.vue'),
-            props: true
+        component: () => import('@page/error/error.vue'),
+        props: true
+    },
+    {
+        path: '/404',
+        name: '404',
+        meta: {
+            title: '404'
         },
-        {
-            path: '*',
-            name: '404',
-            redirect: '/tab/home',
-            meta: {
-                title: '404'
-            },
-            component: () => import('@page/error/404.vue')
-        }
-    ]
-
+        component: () => import('@page/error/404.vue'),
+    },
+    {
+      path: '*',
+      redirect: '/404',
+    }
 ]
 
 const routerInstance = new Router({
-    // mode: opt.mode,
     routes
 })
 
-routerInstance.beforeEach((to,from,next)=>{
-    next();
-})
-
-routerInstance.afterEach((to,from,next)=>{
-    // console.log(to,from)
-})
+Intercept(routerInstance)
 
 export default routerInstance

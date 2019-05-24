@@ -8,10 +8,8 @@
 </template>
 
 <script>
-    import {PageMixin} from '@mixin'
     export default {
         name: 'error',
-        mixins: [PageMixin],
         props: ['status'],
         data(){
             return {

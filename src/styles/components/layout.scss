@@ -1,0 +1,32 @@
+.app,.pages,.page{
+  height: 100vh;
+}
+
+.el-container{
+  >.el-aside{
+    background: #3D3A3A;
+    >.el-menu{
+      background-color: transparent;
+      color: #ffffff;
+      .el-menu-item-group__title{
+        color: inherit;
+      }
+      .el-submenu__title{
+        color: inherit;
+        &:hover{
+          background-color: #49494D;
+        }
+      }
+      .el-menu-item{
+        color: inherit;
+        &:hover{
+          color: $color-primary;
+          background-color: #ffffff;
+        }
+      }
+    }
+    .is-opened .el-menu{
+      background-color: #49494D;
+    }
+  }
+}

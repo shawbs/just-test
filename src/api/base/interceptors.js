@@ -6,6 +6,9 @@ import Router from '@/routers';
 
 const requestMap = {}; // 当前请求映射表
 
+function failMsgHandle(msg){
+  alert(msg)
+}
 /**
  * 重复请求处理器
  * @param request
@@ -102,11 +105,7 @@ export function responseSuccess(response) {
     // 接口错误提示信息全局统一拦截提示
     if (result && result.status) {
         if (config._isHandleError) return Promise.reject(result);
-        Vue.prototype.$message.alert(result.statusTitle, '温馨提示', {
-            callback() {
-                
-            },
-        });
+        failMsgHandle(result.statusTitle)
         return Promise.reject(result);
     } else {
         return Promise.resolve(result);

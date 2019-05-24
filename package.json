@@ -1,5 +1,5 @@
 {
-  "name": "asus-r",
+  "name": "vue-pc",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "shawbs <xxw.show@qq.com>",
@@ -11,15 +11,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "element-ui": "^2.8.2",
     "fastclick": "^1.0.6",
-    "html2canvas": "^1.0.0-alpha.11",
-    "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",
-    "nprogress": "^0.2.0",
     "store": "^2.0.12",
     "vconsole": "^3.2.0",
     "vue": "^2.5.2",
-    "vue-navigation": "^1.1.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -48,7 +45,6 @@
     "portfinder": "^1.0.13",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
-    "postcss-px-to-viewport": "0.0.3",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
     "sass-loader": "^7.1.0",

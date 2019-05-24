@@ -1,19 +1,16 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
-import Navigation from 'vue-navigation';
-
-import '@as/app.scss'; //导入全局样式
-import '@script'; //导入全局库
-import inject from '@/inject';
-import component from '@com';
+import '@style/element-variables.scss';
+import Element from 'element-ui';
 import App from './App';
 import router from '@router';
 import store from '@store';
+import '@style/app.scss';
 
+import mock from '@/mock';
 
-Vue.use(Navigation, {router});
-Vue.use(inject);
-Vue.use(component);
+Vue.use(Element, { size: 'small'})
+
 
 FastClick.attach(document.body);
 

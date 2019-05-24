@@ -1,9 +1,10 @@
 
 import Qs from 'qs';
+import config from '@/config';
 
 export default {
     url: '/',
-    baseURL: '',
+    baseURL: config.baseUrl || '',
     method: 'GET',
     /* `transformRequest`允许在请求数据发送到服务器之前对其进行更改
     这只适用于请求方法'PUT'，'POST'和'PATCH'

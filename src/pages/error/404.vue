@@ -1,17 +1,15 @@
 <template>
-    <page :title="pageTitle">
-        <container>
+    <div class="page">
+        <div>
             <h1 class="text-center">404</h1>
             <p class="text-center">The page is not found.</p>
-        </container>
-    </page>
+        </div>
+    </div>
 </template>
 
 <script>
-    import {PageMixin} from '@mixin'
     export default {
         name: 'notfound',
-        mixins: [PageMixin],
         data(){
             return {
 

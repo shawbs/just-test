@@ -12,12 +12,12 @@ module.exports = {
     assetsPublicPath: '/',
     // 代理
     proxyTable: {
-      //使用http://localhost/api代理http://xxx.com/api
-      '/1': {
-          target: 'http://asus.supersonicwx.com',
+      //使用http://localhost/api代理http://xxx.com
+      '/api': {
+          target: 'https://cnodejs.org',
           changeOrigin: true,
           pathRewrite: {
-              '^/1': '1',
+              '^/api': '/api',
           },
       },
     },
@@ -30,7 +30,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
